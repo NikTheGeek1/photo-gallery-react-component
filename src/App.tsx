@@ -4,7 +4,7 @@ import photos from './imports/import-timeline-photos';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <PhotosGallery photos={photos.animalPhotos} />
     </div>
   );

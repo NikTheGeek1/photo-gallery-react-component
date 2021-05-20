@@ -3,9 +3,6 @@
     grid-auto-flow: column;
     width: fit-content;
     max-width: 80vw;
-    height: 100%;
-    justify-items: center;
-    align-items: center;
     column-gap: 5px;
     margin: 0 auto;
     overflow-y: hidden;
@@ -24,15 +21,21 @@
   }
 
 .carousel-photo-container {
+    display: grid;
+    background-color: black;
     width: fit-content;
     cursor: pointer;
     position: relative;
+    align-items: center;
+    justify-items: center;
 }
 
 
 .carousel-photo {
-    width: 20rem;
-    height: 10rem;
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
     user-select: none;
 }
 
@@ -42,7 +45,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; 
     background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
 }
 
