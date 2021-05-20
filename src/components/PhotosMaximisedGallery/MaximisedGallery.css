@@ -1,0 +1,97 @@
+.maximised-gallery-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "x . ." "left photo right" ". carousel .";
+    grid-template-columns: 5rem 1fr 5rem;
+    grid-template-rows: 5rem 1fr 10rem;
+    color: whitesmoke;
+    font-size: 10rem;
+    font-family: "Hack";
+}
+
+.maximised-gallery-x-container {
+    grid-area: x;
+    cursor: pointer;
+    position: relative;
+    /* z-index: 2; */
+}
+
+.maximised-gallery-x::after {
+    content: "x";
+    font-size: 5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.maximised-gallery-left-container {
+    position: relative;
+    grid-area: left;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .1s;
+    margin: auto;
+}
+
+.maximised-gallery-left::after {
+    content: "<";
+    font-size: 5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.maximised-gallery-photo-container {
+    grid-area: photo;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.maximised-gallery-right-container {
+    grid-area: right;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .1s;
+    margin: auto;
+    position: relative;
+}
+
+.maximised-gallery-right::after {
+    content: ">";
+    font-size: 5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.maximised-gallery-carousel-container {
+    grid-area: carousel;
+}
+
+
+.photos-photo-maximised,
+.photos-photo-maximised-reduced {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    max-width: 90%;
+    max-height: 70vh;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    position: relative;
+    user-select: none;
+}
+
+.photos-photo-maximised-reduced {
+    filter: blur(1rem);
+    z-index: 0;
+}

@@ -1,0 +1,2 @@
+1) npx create-react-app photo-gallery-react-component --template typescript
+2)
